@@ -1,0 +1,26 @@
+// abstracts/_mixins.scss
+@use "sass:map";
+
+// Cột chiếm toàn bộ chiều rộng với màu nền riêng (header, footer)
+@mixin full-width-column($bg-color) {
+  width: 100%;
+  background: $bg-color;
+  border-right-color: transparent;
+}
+
+// Ô lưới trắng, không viền
+@mixin plain-cell {
+  background-color: $color-white;
+  border: none;
+}
+
+// Khối xanh trong sidebar
+@mixin block-size($height) {
+  width: 100%;
+  height: $height;
+}
+
+// Lấy chiều cao hàng từ map $wrapper-heights
+@mixin row-height($name) {
+  height: map.get($wrapper-heights, $name);
+}

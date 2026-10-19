@@ -1,0 +1,29 @@
+// components/_grid-content.scss
+.grid-content {
+  width: $column-width;
+  margin: 0;
+  border-right: $grid-border;
+  height: 100%;
+  float: left;
+  background-color: $color-grid-bg;
+
+  // Modifier: cột toàn chiều rộng
+  &--header {
+    @include full-width-column($color-header);
+  }
+
+  &--footer {
+    @include full-width-column($color-footer);
+  }
+
+  // Modifier: ô trắng, không viền
+  &--cell {
+    @include plain-cell;
+  }
+
+  // Modifier: cột sidebar rộng 25%
+  &--sidebar {
+    width: $sidebar-width;
+    padding-top: $sidebar-padding-top;
+  }
+}

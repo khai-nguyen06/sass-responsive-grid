@@ -1,0 +1,12 @@
+{
+  "name": "responsive-grid-sass",
+  "version": "1.0.0",
+  "description": "Tái cấu trúc CSS của responsive-grid sang SASS",
+  "scripts": {
+    "build": "sass --no-source-map --silence-deprecation=import scss/main.scss css/main.css",
+    "watch": "sass --watch --silence-deprecation=import scss/main.scss css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

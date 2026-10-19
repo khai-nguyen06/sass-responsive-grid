@@ -1,0 +1,15 @@
+// components/_blocks.scss
+.grid-block {
+  @include block-size($block-height);
+  background-color: $color-block;
+  border: none;
+  margin-bottom: $block-gap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--tall {
+    @include block-size($block-height-tall);
+  }
+}

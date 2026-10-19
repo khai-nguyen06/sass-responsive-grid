@@ -1,0 +1,43 @@
+// layout/_grid.scss
+
+// Lớp phủ chứa lưới chính
+.grid-overlay {
+  position: absolute;
+  opacity: $overlay-opacity;
+  width: auto;
+  left: $overlay-offset-left;
+  right: $overlay-offset-right;
+}
+
+// Lưới đường kẻ mờ phía sau
+.grid-container {
+  &--guides {
+    opacity: $guides-opacity;
+
+    // Nesting: ô đường kẻ nằm ngay trong container --guides
+    .grid-content {
+      background-color: $color-white;
+      border-right: $guide-border;
+
+      &:first-child {
+        border-left: $guide-border;
+      }
+    }
+  }
+}
+
+// Hàng của lưới
+.grid-wrapper {
+  overflow: auto;
+  position: relative;
+  @include row-height(default);
+
+  // Sinh modifier --header, --body, --footer, --guides từ map
+  @each $name, $height in $wrapper-heights {
+    @if $name != default {
+      &--#{$name} {
+        @include row-height($name);
+      }
+    }
+  }
+}

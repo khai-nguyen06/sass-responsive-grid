@@ -1,0 +1,37 @@
+// abstracts/_variables.scss
+
+// Màu sắc
+$color-header: #9933cc;
+$color-footer: #0099cc;
+$color-block: #33b5e5;
+$color-white: #ffffff;
+$color-grid-bg: #f1f1f1;
+$color-border: grey;
+$color-guide-border: #000000;
+
+// Lưới
+$column-width: 8.33%;      // 1/12 chiều rộng
+$sidebar-width: 25%;       // 3/12 chiều rộng
+$grid-border: 1px solid $color-border;
+$guide-border: 1px solid $color-guide-border;
+
+// Khoảng cách & độ mờ
+$sidebar-padding-top: 15px;
+$block-gap: 10px;
+$overlay-opacity: 0.9;
+$guides-opacity: 0.1;
+$overlay-offset-left: 8px;
+$overlay-offset-right: 10px;
+
+// Chiều cao các hàng (map)
+$wrapper-heights: (
+  default: 250px,
+  header: 90px,
+  body: 230px,
+  footer: 50px,
+  guides: 370px
+);
+
+// Chiều cao các khối xanh trong sidebar
+$block-height: 15%;
+$block-height-tall: 92%;
